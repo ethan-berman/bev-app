@@ -1,0 +1,33 @@
+<div class="parent">
+    <div class="card">
+        <div class="row">
+            <div class="col">
+                <img ng-if="$ctrl.drink.img_url.length" secure src={{$ctrl.drink.img_url}} class="circle responsive-img"  />
+            </div>
+            <div class="col">
+                <p>name: {{$ctrl.drink.name}}</p>
+                <p>abv: {{$ctrl.drink.abv}} %</p>
+            </div>
+            <div class="col">
+                <table>
+                    <thead>
+                    <tr>
+                        <td>#:</td>
+                        <td ng-repeat="bushel in $ctrl.drink.bushel_list">{{bushel.quantity}}</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>$:</td>
+                        <td ng-repeat="bushel in $ctrl.drink.bushel_list">{{bushel.price}}</td>
+                    </tr>
+                    <tr>
+                        <td>Z:</td>
+                        <td ng-repeat="bushel in $ctrl.drink.bushel_list">{{bushel.getValue}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
